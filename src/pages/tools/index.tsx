@@ -12,19 +12,19 @@ const list = [
   },
   {
     icon: 'appStore',
-    label: 'AI应用市场',
+    label: 'AI应用共享',
     link: '/model/share'
   },
-  {
-    icon: 'promotion',
-    label: '邀请好友',
-    link: '/promotion'
-  },
-  {
-    icon: 'develop',
-    label: '开发',
-    link: '/openapi'
-  },
+  // {
+  //   icon: 'promotion',
+  //   label: '邀请好友',
+  //   link: '/promotion'
+  // },
+  // {
+  //   icon: 'develop',
+  //   label: '开发',
+  //   link: '/openapi'
+  // },
   {
     icon: 'git',
     label: 'Git项目地址',
