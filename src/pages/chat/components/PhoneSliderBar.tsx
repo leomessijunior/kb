@@ -30,7 +30,7 @@ const PhoneSliderBar = ({
   const router = useRouter();
   const { colorMode, toggleColorMode } = useColorMode();
   const { myModels, myCollectionModels, loadMyModels } = useUserStore();
-  const { isOpen: isOpenWx, onOpen: onOpenWx, onClose: onCloseWx } = useDisclosure();
+  // const { isOpen: isOpenWx, onOpen: onOpenWx, onClose: onCloseWx } = useDisclosure();
 
   const models = useMemo(
     () => [...myModels, ...myCollectionModels],
@@ -180,13 +180,15 @@ const PhoneSliderBar = ({
       </RenderButton>
       <RenderButton onClick={onOpenWx}>
         {/* <>
+      {/* <RenderButton onClick={onOpenWx}>
+        <>
           <MyIcon name="wx" fill={'white'} w={'18px'} h={'18px'} mr={4} />
           交流群
-        </> */}
+        </>
       </RenderButton>
 
       {/* wx 联系 */}
-      {isOpenWx && <WxConcat onClose={onCloseWx} />}
+      {/* {isOpenWx && <WxConcat onClose={onCloseWx} />} */}
     </Flex>
   );
 };
