@@ -86,7 +86,7 @@ const RegisterForm = ({ setPageType, loginSuccess }: Props) => {
       <form onSubmit={handleSubmit(onclickRegister)}>
         <FormControl mt={5} isInvalid={!!errors.username}>
           <Input
-            placeholder="邮箱/手机号(内测暂不支持手机）"
+            placeholder="邮箱/手机号"
             size={['md', 'lg']}
             {...register('username', {
               required: '邮箱/手机号不能为空',

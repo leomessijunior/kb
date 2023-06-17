@@ -178,8 +178,6 @@ const PhoneSliderBar = ({
           退出聊天
         </>
       </RenderButton>
-      <RenderButton onClick={onOpenWx}>
-        {/* <>
       {/* <RenderButton onClick={onOpenWx}>
         <>
           <MyIcon name="wx" fill={'white'} w={'18px'} h={'18px'} mr={4} />

@@ -12,7 +12,7 @@ const list = [
   },
   {
     icon: 'appStore',
-    label: 'AI应用共享',
+    label: 'AI应用市场',
     link: '/model/share'
   },
   // {
