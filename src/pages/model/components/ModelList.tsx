@@ -97,6 +97,7 @@ const ModelList = ({ modelId }: { modelId: string }) => {
         </Flex>
         <Tooltip label={'新建一个AI应用'}>
           <IconButton
+            className="add-new-app"
             h={'32px'}
             icon={<AddIcon />}
             aria-label={''}

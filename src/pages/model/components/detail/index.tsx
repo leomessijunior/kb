@@ -141,13 +141,14 @@ const ModelDetail = ({ modelId, isPc }: { modelId: string; isPc: boolean }) => {
               {modelDetail.name}
             </Box>
             <Box flex={1} />
-            <Button variant={'outline'} onClick={handlePreviewChat}>
+            <Button className="begin-chat" variant={'outline'} onClick={handlePreviewChat}>
               开始对话
             </Button>
             {isOwner && (
               <Button
                 isLoading={btnLoading}
                 ml={4}
+                className="app-save-setting"
                 onClick={async () => {
                   try {
                     await saveUpdateModel();
@@ -173,13 +174,19 @@ const ModelDetail = ({ modelId, isPc }: { modelId: string; isPc: boolean }) => {
               </Box>
             </Flex>
             <Box mt={4} textAlign={'right'}>
-              <Button variant={'outline'} size={'sm'} onClick={handlePreviewChat}>
+              <Button
+                className="begin-chat"
+                variant={'outline'}
+                size={'sm'}
+                onClick={handlePreviewChat}
+              >
                 开始对话
               </Button>
               {isOwner && (
                 <Button
                   ml={4}
                   size={'sm'}
+                  className="app-save-setting"
                   isLoading={btnLoading}
                   onClick={async () => {
                     try {

@@ -32,8 +32,8 @@ export const ChatModelMap = {
     contextMaxToken: 4096,
     systemMaxToken: 2700,
     maxTemperature: 1.2,
-    // price: 2.5 
-    price: 0.5  //内测期间
+    // price: 2.5
+    price: 0.25 //内测期间
   },
   [OpenAiChatEnum.GPT4]: {
     chatModel: OpenAiChatEnum.GPT4,

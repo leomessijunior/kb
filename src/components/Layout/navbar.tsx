@@ -28,7 +28,8 @@ const Navbar = () => {
         label: '我的应用',
         icon: 'model',
         link: `/model?modelId=${lastModelId}`,
-        activeLink: ['/model']
+        activeLink: ['/model'],
+        className: 'guide-my-app' // 添加一个类名，reactour 将会使用这个类名找到这个元素并高亮显示
       },
       {
         label: '知识库',
@@ -120,6 +121,7 @@ const Navbar = () => {
                     color: '#9096a5',
                     backgroundColor: 'transparent'
                   })}
+              className={item.className} // 传递 className 属性
             >
               <MyIcon name={item.icon as any} width={'22px'} height={'22px'} />
             </Flex>

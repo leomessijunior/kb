@@ -59,7 +59,7 @@ const LoginForm = ({ setPageType, loginSuccess }: Props) => {
       <form onSubmit={handleSubmit(onclickLogin)}>
         <FormControl mt={8} isInvalid={!!errors.username}>
           <Input
-            placeholder="邮箱/手机号"
+            placeholder="邮箱[暂不支持手机]"
             size={['md', 'lg']}
             {...register('username', {
               required: '邮箱/手机号不能为空',

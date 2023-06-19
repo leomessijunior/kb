@@ -17,7 +17,8 @@ const NavbarPhone = () => {
       {
         icon: 'tabbarModel',
         link: `/model`,
-        activeLink: ['/model']
+        activeLink: ['/model'],
+        className: 'guide-my-app'
       },
       {
         icon: 'tabbarMore',

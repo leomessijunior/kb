@@ -52,6 +52,8 @@ import { useGlobalStore } from '@/store/global';
 import { useUserStore } from '@/store/user';
 import Avatar from '@/components/Avatar';
 
+import MySlider from '@/components/Slider';
+
 const ModelEditForm = ({
   formHooks,
   isOwner,
@@ -258,15 +260,15 @@ ${e.password ? `密码为: ${e.password}` : ''}`;
             ))}
           </Select>
         </Flex>
-        <Flex alignItems={'center'} mt={5}>
-          {/* <Box flex={'0 0 80px'} w={0}>
+        {/* <Flex alignItems={'center'} mt={5}>
+          <Box flex={'0 0 80px'} w={0}>
             价格
           </Box>
           <Box>
             {formatPrice(ChatModelMap[getValues('chat.chatModel')]?.price, 1000)}
             元/1K tokens(包括上下文和回答)
-          </Box> */}
-        </Flex>
+          </Box>
+        </Flex> */}
         <Flex alignItems={'center'} mt={5}>
           <Box flex={'0 0 80px'} w={0}>
             收藏人数:
@@ -275,7 +277,9 @@ ${e.password ? `密码为: ${e.password}` : ''}`;
         </Flex>
         {isOwner && (
           <Flex mt={5} alignItems={'center'}>
-            <Box flex={'0 0 100px'}>删除应用</Box>
+            <Box flex={'0 0 100px'} className="app-delete">
+              删除应用
+            </Box>
             <Button
               colorScheme={'gray'}
               variant={'outline'}
@@ -293,11 +297,11 @@ ${e.password ? `密码为: ${e.password}` : ''}`;
           <Box fontWeight={'bold'}>模型效果</Box>
           <FormControl mt={4}>
             <Flex alignItems={'center'}>
-              <Box flex={'0 0 80px'} w={0}>
+              <Box flex={'0 0 80px'} w={0} className="setup-temperature">
                 <Box as={'span'} mr={2}>
                   温度
                 </Box>
-                <Tooltip label={'温度越高，模型的发散能力越强；温度越低，内容越严谨。'}>
+                <Tooltip label={'温度值越大越发散；越小越严谨。'}>
                   <QuestionOutlineIcon />
                 </Tooltip>
               </Box>
@@ -353,7 +357,9 @@ ${e.password ? `密码为: ${e.password}` : ''}`;
           )}
 
           <Box mt={4}>
-            <Box mb={1}>系统提示词</Box>
+            <Box mb={1} className="add-system-prompt">
+              系统提示词
+            </Box>
             <Textarea
               rows={8}
               maxLength={-1}
@@ -370,7 +376,9 @@ ${e.password ? `密码为: ${e.password}` : ''}`;
         <>
           {/* model share setting */}
           <Card p={4}>
-            <Box fontWeight={'bold'}>分享设置</Box>
+            <Box fontWeight={'bold'} className="share-model-setting">
+              分享设置
+            </Box>
             <Box>
               <Flex mt={5} alignItems={'center'}>
                 <Box mr={1} fontSize={['sm', 'md']}>
@@ -421,6 +429,7 @@ ${e.password ? `密码为: ${e.password}` : ''}`;
                 variant={'outline'}
                 colorScheme={'myBlue'}
                 onClick={onOpenKbSelect}
+                className="select-kb-btn"
               >
                 选择
               </Button>
